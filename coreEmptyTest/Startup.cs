@@ -30,7 +30,8 @@ namespace coreEmptyTest
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                ClassLibrary1.Class1.returnStr(out string shunStr); // new syntax
+                await context.Response.WriteAsync(shunStr);
             });
         }
     }
